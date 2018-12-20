@@ -1,7 +1,9 @@
 # SLEP_deenhanced
 
 
-This is the registration code for "Correlation-weighted sparse representation for liver DCE-MRI decomposition registration". SLEP_deenhanced.m is the main file. 
+This is the registration code for "Correlation-weighted sparse representation for liver DCE-MRI decomposition registration". 
+
+SLEP_deenhanced.m is the main file. 
 
 SLEP_package_4.1 is the toolbox for de-enhancing DCE-MRI and MIRT is the registration toolbox. 
 
