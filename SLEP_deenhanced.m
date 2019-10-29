@@ -14,14 +14,14 @@ end
 target_curve=mean(mean(mean(DCE_4D_original_data(coordinates_x-1:coordinates_x+1,coordinates_y-1:coordinates_y+1,...
     coordinates_z-1:coordinates_z+1,:))));
 
-Dictionary_composed=reshape(size(DCE_4D_original_data,1)*size(DCE_4D_original_data,2)*sizesize(DCE_4D_original_data,3),[size(DCE_4D_original_data,1)*size(DCE_4D_original_data,2)*sizesize(DCE_4D_original_data,3),size(DCE_4D_original_data,4)]);
+Dictionary_composed=reshape(size(DCE_4D_original_data,1)*size(DCE_4D_original_data,2)*size(DCE_4D_original_data,3),[size(DCE_4D_original_data,1)*size(DCE_4D_original_data,2)*size(DCE_4D_original_data,3),size(DCE_4D_original_data,4)]);
 Dictionary_composed=Dictionary_composed';
 %% solve the coefficients x 
 % When target_curve and Dictionary_composed are already defined, we can use
 % SLEP toolbox to solve the coefficients x
 % SLEP parameters definiation
-opts.G=[1,2:size(DCE_4D_original_data,1)*size(DCE_4D_original_data,2)*sizesize(DCE_4D_original_data,3)];
-opts.ind=[[1, 1, 1]',[1+1, size(DCE_4D_original_data,1)*size(DCE_4D_original_data,2)*sizesize(DCE_4D_original_data,3), 1]'];
+opts.G=[1,2:size(DCE_4D_original_data,1)*size(DCE_4D_original_data,2)*size(DCE_4D_original_data,3)];
+opts.ind=[[1, 1, 1]',[1+1, size(DCE_4D_original_data,1)*size(DCE_4D_original_data,2)*size(DCE_4D_original_data,3), 1]'];
 opts.init=2;        % starting from a zero point
 opts.tFlag=5;       % the relative change is less than opts.tol
 opts.maxIter=1000;  % maximum number of iterations
